@@ -142,71 +142,76 @@ namespace InterwiewQuestions
                 x /= 10;
             }
             return x == reversedNum || x == reversedNum/10;                
-        }
+        }              
 
         public int RomanToInt(string s)
         {
-
-            //Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-
-            //Symbol Value
-            //I             1
-            //V             5
-            //X             10
-            //L             50
-            //C             100
-            //D             500
-            //M             1000
-            //For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II.The number 27 is written as XXVII, which is XX + V + II.
-
-            //Roman numerals are usually written largest to smallest from left to right.However, the numeral for four is not IIII.Instead, the number four is written as IV.Because the one is before the five we subtract it making four.The same principle applies to the number nine, which is written as IX.There are six instances where subtraction is used:
-
-
-            //I can be placed before V(5) and X(10) to make 4 and 9.
-            //X can be placed before L(50) and C(100) to make 40 and 90.
-            //C can be placed before D(500) and M(1000) to make 400 and 900.
-            //Given a roman numeral, convert it to an integer.
-
-
-            int returnedNum = 0;
-            char[] chars = s.ToCharArray();
-            var dictRoman = new Dictionary<string, int>();
-            dictRoman.Add("I", 1);
-            dictRoman.Add("V", 5);
-            dictRoman.Add("X", 10);
-            dictRoman.Add("L", 50);
-            dictRoman.Add("C", 100);
-            dictRoman.Add("D", 500);
-            dictRoman.Add("M", 1000);
-
-            var xxx = s.LastIndexOf("X");
-            var yyy = s.LastIndexOf("I");
-
-            if (s.Contains("I") && (s.IndexOf("I") < s.IndexOf("V") || s.IndexOf("I") < s.IndexOf("X")))
+            Dictionary<char, int> RomanMap = new Dictionary<char, int>()
             {
-                dictRoman["I"] = -1;
-            }
-            if (s.Contains("X") && s.IndexOf("X") < s.IndexOf("L") || s.IndexOf("X") < s.IndexOf("C"))
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+            };
+
+            int number = 0;
+            for (int i = 0; i < s.Length; i++)
             {
-                dictRoman["X"] = -10;
+                if (i + 1 < s.Length && RomanMap[s[i]] < RomanMap[s[i + 1]])
+                {
+                    number -= RomanMap[s[i]];
+                }
+                else
+                {
+                    number += RomanMap[s[i]];
+                }
             }
-
-
-            foreach (var c in chars)
-            {                
-                returnedNum = returnedNum + dictRoman[c.ToString()];
-            }
-
-
-
-            return returnedNum;
-
-
-
+            return number;
         }
 
-    
+        public string LongestCommonPrefix(string[] strs)
+        {
+            if (strs.Length == 0) return "";
+            String prefix = strs[0];
+            for (int i = 1; i < strs.Length; i++)
+                while (strs[i].IndexOf(prefix) != 0)
+                {
+                    prefix = prefix.Substring(0, prefix.Length - 1);
+                    if (prefix=="") return "";
+                }
+            return prefix;
+        }
 
+        public bool IsValidParantheses(string s)
+        {
+            //Runtime    Memory
+            //256 ms     39.1 MB
+
+            while (s.Contains("{}") || s.Contains("()") || s.Contains("[]"))
+            {
+                s = s.Replace("{}", "");
+                s = s.Replace("[]", "");
+                s = s.Replace("()", "");
+            }
+
+            if(s == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+                        
+        }
+
+        public bool IsValidParanthesesBetterWay()
+        {
+            return true;
+        }
 
     }
 }
