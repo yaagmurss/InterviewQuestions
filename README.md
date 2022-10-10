@@ -1,8 +1,8 @@
 # Leet Code Interview Questions
--RunninArray
--OrderFromLongestToShortest
--TwoSum
--PalindromeNumber
--RomanNumberConverter
--LongestCommonPrefix
--IsValidParentheses
+- RunninArray
+- OrderFromLongestToShortest
+- TwoSum
+- PalindromeNumber
+- RomanNumberConverter
+- LongestCommonPrefix
+- IsValidParentheses
