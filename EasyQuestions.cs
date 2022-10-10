@@ -206,10 +206,42 @@ namespace InterwiewQuestions
                 return false;
             }
                         
-        }
+        }        
 
-        public bool IsValidParanthesesBetterWay()
+        public bool IsValidParanthesesBetterWay(string s)
         {
+        //  Runtime: 105 ms, faster than 70.84 % 
+        //  Memory Usage: 36.9 MB, less than 32.66 % 
+
+            if (string.IsNullOrEmpty(s))
+                return true;
+
+            Stack<char> brackets = new Stack<char>();
+
+            foreach (var c in s)
+            {
+                if (c == '[' || c == '{' || c == '(')
+                    brackets.Push(c);
+                else if (c == ']' || c == '}' || c == ')')
+                {
+                    // Too many closing brackets, e.g. (123))
+                    if (brackets.Count <= 0)
+                        return false;
+
+                    char open = brackets.Pop();
+
+                    // Inconsistent brackets, e.g. (123]
+                    if (c == '}' && open != '{' ||
+                        c == ')' && open != '(' ||
+                        c == ']' && open != '[')
+                        return false;
+                }
+            }
+
+            // Too many opening brackets, e.g. ((123) 
+            if (brackets.Count > 0)
+                return false;
+
             return true;
         }
 
