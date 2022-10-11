@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
 using InterwiewQuestions;
 
 
@@ -58,7 +61,16 @@ namespace InterwiewQuestions
             Console.WriteLine(easyQuestions.IsValidParantheses("{[[]]}]"));
             Console.WriteLine(easyQuestions.IsValidParanthesesBetterWay("{[[]]}"));
 
+            Console.WriteLine("---------------------MergeTwoLists----------------------");
+            //MergeTwoLists
+
+            var list1 = new List<int>{ 0 };
+            var list2 = new List<int>{  };
+
+            Console.WriteLine(easyQuestions.MergeTwoLists(list1, list2));
             
+
+
 
 
 

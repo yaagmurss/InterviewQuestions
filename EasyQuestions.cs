@@ -245,5 +245,45 @@ namespace InterwiewQuestions
             return true;
         }
 
+        public List<int> MergeTwoLists(List<int> list1, List<int> list2)
+        {
+            var outputList = new List<int>();
+            var lenght = Math.Max(list1.Count, list2.Count);
+
+            if(lenght == 0)
+            {
+                return outputList;
+            }
+
+            for(var i=0; i<lenght; i++)
+            {
+                try
+                {
+                    if (list1[i]<list2[i])
+                    {
+                        outputList.Add(list1[i]);
+                        outputList.Add(list2[i]);
+                    }
+                    else
+                    {
+                        outputList.Add(list2[i]);
+                        outputList.Add(list1[i]);                        
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("you got cathed");
+                }
+            }
+
+            foreach(var element in outputList)
+            {
+                Console.WriteLine(element);
+            }
+            
+            return outputList;
+
+        }
+
     }
 }
