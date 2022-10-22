@@ -7,3 +7,4 @@
 - LongestCommonPrefix
 - IsValidParentheses
 - MergeTwoLists
+- MergeTwoLinkedLists
