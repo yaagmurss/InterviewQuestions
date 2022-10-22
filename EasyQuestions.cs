@@ -7,7 +7,7 @@ namespace InterwiewQuestions
 {
     public class EasyQuestions
     {
-        
+
         public int[] RunningSum(int[] nums)
         {
             int counter = 0;
@@ -20,26 +20,26 @@ namespace InterwiewQuestions
                 int sum = 0;
                 counter = index;
 
-                while (counter>=0)
+                while (counter >= 0)
                 {
-                    
+
                     sum += nums[counter];
                     counter -= 1;
                 }
-                runningArray[index] = sum ;
+                runningArray[index] = sum;
                 index += 1;
 
-            }           
+            }
 
 
 
-            foreach(var n in runningArray)
+            foreach (var n in runningArray)
             {
                 Console.WriteLine(n);
             }
 
             return runningArray;
-        }        
+        }
 
         public IEnumerable<string> OrderFromLongestToShortest(IEnumerable<string> words)
         {
@@ -48,8 +48,8 @@ namespace InterwiewQuestions
 
             //    For example, for { "bb", "a", "ccc"}
             //    The result should be { "ccc", "bb", "a"}                           
-           
-            List<string> strList = words.OrderBy(key=>key).ToList();
+
+            List<string> strList = words.OrderBy(key => key).ToList();
 
             foreach (var str in strList)
             {
@@ -61,41 +61,41 @@ namespace InterwiewQuestions
 
         public int[] TwoSum(int[] nums, int target)
         {
-            int element1 = 0; 
+            int element1 = 0;
             int element2 = 0;
 
             foreach (var i in nums)
-            {                
-                foreach(var j in nums)
-                {                   
+            {
+                foreach (var j in nums)
+                {
                     if (i != j)
-                    { 
-                        if( i + j == target)
+                    {
+                        if (i + j == target)
                         {
                             element1 = i;
                             element2 = j;
-                            
+
                         }
                     }
                 }
             }
-            var twoSum = new int[2]{ nums[element1], nums[element2]};
+            var twoSum = new int[2] { nums[element1], nums[element2] };
 
-            Console.WriteLine(twoSum[0].ToString(),twoSum[1].ToString());
+            Console.WriteLine(twoSum[0].ToString(), twoSum[1].ToString());
             return twoSum;
         }
 
         public bool IsPalindrome(int x)
         {
-        //Runtime: 101 ms
-        //Memory Usage: 29.4 MB
+            //Runtime: 101 ms
+            //Memory Usage: 29.4 MB
 
-        //Given an integer x, return true if x is palindrome integer.
-        //An integer is a palindrome when it reads the same backward as forward.
-        //For example, 121 is a palindrome while 123 is not.
-        //Could you solve it without converting the integer to a string?
+            //Given an integer x, return true if x is palindrome integer.
+            //An integer is a palindrome when it reads the same backward as forward.
+            //For example, 121 is a palindrome while 123 is not.
+            //Could you solve it without converting the integer to a string?
 
-        var listOfInteger = new List<int>();
+            var listOfInteger = new List<int>();
             bool isIntegerPalindrome = false;
 
             while (x >= 0)
@@ -109,10 +109,10 @@ namespace InterwiewQuestions
                 {
                     listOfInteger.Add(x % 10);
                     x = x / 10;
-                }                
+                }
             }
 
-            for(int i=0; i<listOfInteger.Count; i++)
+            for (int i = 0; i < listOfInteger.Count; i++)
             {
                 if (listOfInteger[i] == listOfInteger[listOfInteger.Count - (i + 1)])
                 {
@@ -123,8 +123,8 @@ namespace InterwiewQuestions
                     isIntegerPalindrome = false;
                     break;
                 }
-            }         
-            return isIntegerPalindrome;            
+            }
+            return isIntegerPalindrome;
         }
 
         public bool IsPalindromeBetterWay(int x)
@@ -133,16 +133,16 @@ namespace InterwiewQuestions
             //Memory Usage: 28.5 MB, less than 60.81 % of C# online submissions for Palindrome Number.
 
             if (x < 0 || x % 10 == 0) { return false; }
-            if (x == 0 ) { return true; }
+            if (x == 0) { return true; }
 
             int reversedNum = 0;
-            while(x > reversedNum)
+            while (x > reversedNum)
             {
                 reversedNum = reversedNum * 10 + (x % 10);
                 x /= 10;
             }
-            return x == reversedNum || x == reversedNum/10;                
-        }              
+            return x == reversedNum || x == reversedNum / 10;
+        }
 
         public int RomanToInt(string s)
         {
@@ -180,7 +180,7 @@ namespace InterwiewQuestions
                 while (strs[i].IndexOf(prefix) != 0)
                 {
                     prefix = prefix.Substring(0, prefix.Length - 1);
-                    if (prefix=="") return "";
+                    if (prefix == "") return "";
                 }
             return prefix;
         }
@@ -197,7 +197,7 @@ namespace InterwiewQuestions
                 s = s.Replace("()", "");
             }
 
-            if(s == "")
+            if (s == "")
             {
                 return true;
             }
@@ -205,13 +205,13 @@ namespace InterwiewQuestions
             {
                 return false;
             }
-                        
-        }        
+
+        }
 
         public bool IsValidParanthesesBetterWay(string s)
         {
-        //  Runtime: 105 ms, faster than 70.84 % 
-        //  Memory Usage: 36.9 MB, less than 32.66 % 
+            //  Runtime: 105 ms, faster than 70.84 % 
+            //  Memory Usage: 36.9 MB, less than 32.66 % 
 
             if (string.IsNullOrEmpty(s))
                 return true;
@@ -250,16 +250,16 @@ namespace InterwiewQuestions
             var outputList = new List<int>();
             var lenght = Math.Max(list1.Count, list2.Count);
 
-            if(lenght == 0)
+            if (lenght == 0)
             {
                 return outputList;
             }
 
-            for(var i=0; i<lenght; i++)
+            for (var i = 0; i < lenght; i++)
             {
                 try
                 {
-                    if (list1[i]<list2[i])
+                    if (list1[i] < list2[i])
                     {
                         outputList.Add(list1[i]);
                         outputList.Add(list2[i]);
@@ -267,7 +267,7 @@ namespace InterwiewQuestions
                     else
                     {
                         outputList.Add(list2[i]);
-                        outputList.Add(list1[i]);                        
+                        outputList.Add(list1[i]);
                     }
                 }
                 catch
@@ -276,14 +276,15 @@ namespace InterwiewQuestions
                 }
             }
 
-            foreach(var element in outputList)
+            foreach (var element in outputList)
             {
                 Console.WriteLine(element);
             }
-            
+
             return outputList;
 
         }
+
 
     }
 }

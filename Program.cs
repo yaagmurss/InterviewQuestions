@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Linq;
-using InterwiewQuestions;
-
+using System.Globalization;
+using System.Data;
 
 namespace InterwiewQuestions
 {
@@ -64,11 +63,16 @@ namespace InterwiewQuestions
             Console.WriteLine("---------------------MergeTwoLists----------------------");
             //MergeTwoLists
 
-            var list1 = new List<int>{ 0 };
-            var list2 = new List<int>{  };
+            var list1 = new List<int>{1,2,3};
+            var list2 = new List<int>{3,4,5};
 
             Console.WriteLine(easyQuestions.MergeTwoLists(list1, list2));
-            
+
+            Console.WriteLine("---------------------MergeTwoListsWithLinkedList----------------------");
+            //MergeTwoListsWithLinkedList
+
+
+            Console.WriteLine(linkedListQuestions.MergeTwoListsWithLinkedList(listNode1, listNode2));
 
 
 
