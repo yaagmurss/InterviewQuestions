@@ -70,11 +70,20 @@ namespace InterwiewQuestions
 
             Console.WriteLine("---------------------RemoveDuplicatesfromSortedArray----------------------");
 
-            var numbers = new int[] { 1,1,5,8,8,9 };
-            //  [1,1,2] ==> 2
-            //  [0,0,1,1,1,2,2,3,3,4] ==> 5
+            var testCase1 = new int[] { 1, 1, 2, 2, 3, 4, 5, 5 };
+            var testCase2 = new int[] { 1, 1, 2, 2, 3 };
+            var testCase3 = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            var testCase4 = new int[] {  };
+            var testCase5 = new int[] { 1 };
+            var testCase6 = new int[] {1, 1,  2 };
 
-            Console.WriteLine(easyQuestions.RemoveDuplicates(numbers));
+            //Console.WriteLine(easyQuestions.RemoveDuplicates(numbers));
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase1) == 5) { Console.WriteLine("testCase1 : PASS :)"); } else  { Console.WriteLine("testCase1 : FAIL"); }
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase2) == 3) { Console.WriteLine("testCase2 : PASS :)"); } else { Console.WriteLine("testCase2 : FAIL"); }
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase3) == 5) { Console.WriteLine("testCase3 : PASS :)"); } else { Console.WriteLine("testCase3 : FAIL"); }
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase4) == 0) { Console.WriteLine("testCase4 : PASS :)"); } else { Console.WriteLine("testCase4 : FAIL"); }
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase5) == 1) { Console.WriteLine("testCase5 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
+            if (easyQuestions.RemoveDublicatesBetterWay(testCase6) == 2) { Console.WriteLine("testCase6 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
 
 
 

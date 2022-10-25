@@ -357,10 +357,22 @@ namespace InterwiewQuestions
 
         public int RemoveDublicatesBetterWay(int[] nums)
         {
-            int k = 0;
-            return k;
+            int count = 0;
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                if (nums[i] == nums[i + 1])
+                {
+                    nums[i] = int.MaxValue;
+                    count = count + 1;
+                }
+            }
+
+            Array.Sort(nums);
+            return nums.Length - count;
         }
 
-
     }
+
+
+    
 }
