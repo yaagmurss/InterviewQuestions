@@ -9,3 +9,4 @@
 - MergeTwoLists
 - MergeTwoLinkedLists
 - RemoveDublicates
+- RemoveElement
