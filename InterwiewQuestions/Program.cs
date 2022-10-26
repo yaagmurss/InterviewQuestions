@@ -85,7 +85,22 @@ namespace InterwiewQuestions
             if (easyQuestions.RemoveDublicatesBetterWay(testCase5) == 1) { Console.WriteLine("testCase5 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
             if (easyQuestions.RemoveDublicatesBetterWay(testCase6) == 2) { Console.WriteLine("testCase6 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
 
+            Console.WriteLine("---------------------RemoveElement----------------------");
 
+            var testCase1ForRemoveElement = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
+            var testCase2ForRemoveElement = new int[] { 1, 1, 2, 2, 3 };
+            var testCase3ForRemoveElement = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            var testCase4ForRemoveElement = new int[] { };
+            var testCase5ForRemoveElement = new int[] { 1 };
+            var testCase6ForRemoveElement = new int[] { 1, 1, 2 };
+
+            //Console.WriteLine(easyQuestions.RemoveDuplicates(numbers));
+            if (easyQuestions.RemoveElement(testCase1ForRemoveElement,2) == 5) { Console.WriteLine("testCase1 : PASS :)"); } else { Console.WriteLine("testCase1 : FAIL"); }
+            if (easyQuestions.RemoveElement(testCase2ForRemoveElement,2) == 3) { Console.WriteLine("testCase2 : PASS :)"); } else { Console.WriteLine("testCase2 : FAIL"); }
+            if (easyQuestions.RemoveElement(testCase3ForRemoveElement,1) == 7) { Console.WriteLine("testCase3 : PASS :)"); } else { Console.WriteLine("testCase3 : FAIL"); }
+            if (easyQuestions.RemoveElement(testCase4ForRemoveElement,5) == 0) { Console.WriteLine("testCase4 : PASS :)"); } else { Console.WriteLine("testCase4 : FAIL"); }
+            if (easyQuestions.RemoveElement(testCase5ForRemoveElement,1) == 0) { Console.WriteLine("testCase5 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
+            if (easyQuestions.RemoveElement(testCase6ForRemoveElement,1) == 1) { Console.WriteLine("testCase6 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
 
         }
     }
