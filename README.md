@@ -10,3 +10,5 @@
 - MergeTwoLinkedLists
 - RemoveDublicates
 - RemoveElement
+- LengthOfLastWord
+- SearchInsertPosition
