@@ -306,44 +306,44 @@ namespace InterwiewQuestions
 
 
             int j = 0;
-            while (j < nums.Length-1)
+            while (j < nums.Length - 1)
             {
 
                 var firstElement = nums[j];
                 var secondElement = nums[j + 1];
-                
+
 
                 if (firstElement == secondElement)
                 {
 
-                    int i = Array.FindIndex(nums, w=>w==firstElement);
+                    int i = Array.FindIndex(nums, w => w == firstElement);
 
-                    while (i < nums.Length-1)
+                    while (i < nums.Length - 1)
                     {
                         nums[i] = nums[i + 1];
                         i++;
                     }
 
                     nums[nums.Length - 1] = firstElement;
-                    
+
                 }
                 else
                 {
                     j++;
                 }
-               
+
             }
 
 
 
             int k = 0;
-            foreach(var n in nums)
+            foreach (var n in nums)
             {
                 k++;
 
-                if (n == firstDublicate & k > 1) 
-                {     
-                        break;
+                if (n == firstDublicate & k > 1)
+                {
+                    break;
                 }
             }
 
@@ -352,7 +352,7 @@ namespace InterwiewQuestions
 
 
 
-            return k-1;
+            return k - 1;
         }
 
         public int RemoveDublicatesBetterWay(int[] nums)
@@ -381,10 +381,10 @@ namespace InterwiewQuestions
             /// Return k after placing the final result in the first k slots of nums.
             /// Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
             /// </summary>
-            
+
             int k = 0;
 
-            for (int i=0  ;i<nums.Length ; i++)
+            for (int i = 0; i < nums.Length; i++)
             {
                 if (nums[i] == val)
                 {
@@ -398,8 +398,26 @@ namespace InterwiewQuestions
             return nums.Length - k;
         }
 
+        public int[] PlusOne(int[] digits)
+        {
+            int n = digits.Length;
+            for (int i = n - 1; i >= 0; i--)
+            {
+                if (digits[i] < 9)
+                {
+                    digits[i]++;
+                    return digits;
+                }
+                digits[i] = 0;
+            }
+            int[] newNumber = new int[n + 1];
+            newNumber[0] = 1;
+
+            return newNumber;
+        }
+
+
     }
 
 
-    
 }
