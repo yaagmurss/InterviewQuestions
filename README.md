@@ -12,3 +12,4 @@
 - RemoveElement
 - LengthOfLastWord
 - SearchInsertPosition
+- PlusOne
