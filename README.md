@@ -13,3 +13,5 @@
 - LengthOfLastWord
 - SearchInsertPosition
 - PlusOne
+- AddBinary
+
