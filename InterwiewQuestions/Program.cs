@@ -141,7 +141,29 @@ namespace InterwiewQuestions
             if (stringOperationsQuestions.LengthOfLastWord(testCase5ForStringOperationsQuestions) == 1) { Console.WriteLine("testCase5 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
             if (stringOperationsQuestions.LengthOfLastWord(testCase6ForStringOperationsQuestions) == 3) { Console.WriteLine("testCase6 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
 
+            Console.WriteLine("---------------------AddBinary----------------------");
 
+            string a = "1101", b = "100";
+            Console.WriteLine(easyQuestions.AddBinary(a, b) );
+
+
+
+            Console.WriteLine("---------------------MySqrt----------------------");
+
+
+
+            if (binaySearchQuestions.MySqrt(0) == 0) { Console.WriteLine("testCase1 : PASS :)"); } else { Console.WriteLine("testCase1 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(1) == 1) { Console.WriteLine("testCase2 : PASS :)"); } else { Console.WriteLine("testCase2 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(2) == 1) { Console.WriteLine("testCase3 : PASS :)"); } else { Console.WriteLine("testCase3 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(3) == 1) { Console.WriteLine("testCase4 : PASS :)"); } else { Console.WriteLine("testCase4 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(4) == 2) { Console.WriteLine("testCase5 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(5) == 2) { Console.WriteLine("testCase6 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(6) == 2) { Console.WriteLine("testCase7 : PASS :)"); } else { Console.WriteLine("testCase1 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(7) == 2) { Console.WriteLine("testCase8 : PASS :)"); } else { Console.WriteLine("testCase2 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(8) == 2) { Console.WriteLine("testCase9 : PASS :)"); } else { Console.WriteLine("testCase3 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(9) == 3) { Console.WriteLine("testCase10 : PASS :)"); } else { Console.WriteLine("testCase4 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(10) == 3) { Console.WriteLine("testCase11 : PASS :)"); } else { Console.WriteLine("testCase5 : FAIL"); }
+            if (binaySearchQuestions.MySqrt(16) == 4) { Console.WriteLine("testCase12 : PASS :)"); } else { Console.WriteLine("testCase6 : FAIL"); }
 
         }
     }
