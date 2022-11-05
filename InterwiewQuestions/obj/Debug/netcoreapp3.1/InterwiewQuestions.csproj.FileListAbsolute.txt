@@ -1,0 +1,14 @@
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.csproj.AssemblyReference.cache
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.AssemblyInfoInputs.cache
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.AssemblyInfo.cs
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.csproj.CoreCompileInputs.cache
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.exe
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.deps.json
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.runtimeconfig.json
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.runtimeconfig.dev.json
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.dll
+C:\Users\200741\source\repos\InterwiewQuestions\bin\Debug\netcoreapp3.1\InterwiewQuestions.pdb
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.dll
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.pdb
+C:\Users\200741\source\repos\InterwiewQuestions\obj\Debug\netcoreapp3.1\InterwiewQuestions.genruntimeconfig.cache
