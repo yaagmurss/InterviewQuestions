@@ -17,3 +17,4 @@
 - MySqrt
 - ClimbingStairs
 - RemoveDublicatesFromLinkedList
+- Maximum69Number
