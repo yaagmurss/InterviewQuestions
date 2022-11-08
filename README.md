@@ -18,3 +18,4 @@
 - ClimbingStairs
 - RemoveDublicatesFromLinkedList
 - Maximum69Number
+- Reversed Integer
