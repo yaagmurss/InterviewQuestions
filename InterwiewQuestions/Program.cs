@@ -30,7 +30,9 @@ namespace InterwiewQuestions
 
             var mediumQuestions = new MediumQuestion();
 
-            Console.WriteLine(mediumQuestions.maximum69Number(9669)); 
+            Console.WriteLine(mediumQuestions.maximum69Number(9669));
+
+            Console.WriteLine(mediumQuestions.Reverse(123));
 
 
 

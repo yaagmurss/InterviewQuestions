@@ -36,6 +36,26 @@ namespace InterwiewQuestions.MediumQuestions
 
             return indexSix == -1 ? num : num + 3 * (int)Math.Pow(10, indexSix);
         }
+
+        public int Reverse(int x)
+        {
+            long res = 0;
+
+            while (x != 0)
+            {
+                res = res * 10 + x % 10;
+                x = x / 10;
+            }
+
+            if (res < Int32.MinValue || res > Int32.MaxValue)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(res);
+            }
+        }
     }
         
 }
