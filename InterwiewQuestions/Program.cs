@@ -6,6 +6,7 @@ using System.Data;
 using InterwiewQuestions.LinkedLists;
 using InterwiewQuestions.SortingQuestions;
 using InterwiewQuestions.MediumQuestions;
+using InterwiewQuestions.GraphTheoryQuestions;
 
 namespace InterwiewQuestions
 {
@@ -13,26 +14,14 @@ namespace InterwiewQuestions
     {
         static void Main(string[] args)
         {
-            //// SortingArrayQuestions
-            //var sortingArrayQuestions = new SortingArrayQuestions();
+            var depthFirst = new DepthFirstSearch();
 
-            //var nums1 = new int[] { -1, 0, 0, 3, 3, 3, 0, 0, 0 };
-            //var nums2 = new int[] {1, 2, 2};
-            
-            //sortingArrayQuestions.Merge(nums1,6,nums2,3);
-
-            //foreach (var element in nums1)
-            //{
-            //    Console.Write(element);
-            //}
-
-            // MediumQuestions
-
-            var mediumQuestions = new MediumQuestion();
-
-            Console.WriteLine(mediumQuestions.maximum69Number(9669));
-
-            Console.WriteLine(mediumQuestions.Reverse(123));
+            //A jagged array is sometimes called an "array of arrays." 
+            depthFirst.removeStones(new int[][]{
+                                                new int[] { 1, 3, 5, 7, 9 },
+                                                new int[] { 0, 2, 4, 6 },
+                                                new int[] { 11, 22 }
+                                                });
 
 
 
