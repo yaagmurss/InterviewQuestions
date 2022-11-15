@@ -11,7 +11,7 @@
 ***Stack Questions***
 - IsValidParentheses
 
-***LinkedListQuestions ***
+***LinkedListQuestions***
 - MergeTwoLists
 - MergeTwoLinkedLists
 - RemoveDublicates
