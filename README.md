@@ -1,6 +1,6 @@
 # Leet Code Interview Questions
 
-***EasyQuestions***
+***Easy Questions***
 - RunninArray
 - OrderFromLongestToShortest
 - TwoSum
@@ -11,7 +11,7 @@
 ***Stack Questions***
 - IsValidParentheses
 
-***LinkedListQuestions***
+***Linked List Questions***
 - MergeTwoLists
 - MergeTwoLinkedLists
 - RemoveDublicates
