@@ -31,4 +31,5 @@
 - Reversed Integer
 
 ***Graph Theory***
-- RemoveStones
+- DepthFirstSearch
+- NumberOfIslands
