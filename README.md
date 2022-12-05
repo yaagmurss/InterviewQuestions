@@ -1,13 +1,5 @@
 # Leet Code Interview Questions
 
-***Easy Questions***
-- RunninArray
-- OrderFromLongestToShortest
-- TwoSum
-- PalindromeNumber
-- RomanNumberConverter
-- LongestCommonPrefix
-
 ***Stack Questions***
 - IsValidParentheses
 
@@ -17,7 +9,7 @@
 - RemoveDublicates
 - RemoveElement
 
-***String Questions***
+***String Operation Questions***
 - LengthOfLastWord
 - SearchInsertPosition
 - PlusOne
@@ -26,11 +18,19 @@
 - ClimbingStairs
 - RemoveDublicatesFromLinkedList
 
-**Medium Questions**
-- Maximum69Number
-- Reversed Integer
-
 ***Graph Theory***
 - DepthFirstSearch
 - NumberOfIslands
 - NumberOfEnclaves
+
+***Easy Questions***
+- RunninArray
+- OrderFromLongestToShortest
+- TwoSum
+- PalindromeNumber
+- RomanNumberConverter
+- LongestCommonPrefix
+
+**Medium Questions**
+- Maximum69Number
+- Reversed Integer
