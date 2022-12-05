@@ -33,3 +33,4 @@
 ***Graph Theory***
 - DepthFirstSearch
 - NumberOfIslands
+- NumberOfEnclaves
