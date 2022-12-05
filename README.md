@@ -3,6 +3,9 @@
 ***Stack Questions***
 - IsValidParentheses
 
+***BinarySearch Questions***
+- SearchInsertPosition
+
 ***Linked List Questions***
 - MergeTwoLists
 - MergeTwoLinkedLists
