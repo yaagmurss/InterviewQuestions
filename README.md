@@ -26,6 +26,7 @@
 - NumberOfIslands
 - NumberOfEnclaves
 - FindCenterOfStarGraph
+- FindIfPathExistsInGraph
 
 ***Easy Questions***
 - RunninArray
