@@ -13,7 +13,7 @@ namespace InterwiewQuestions.GraphTheoryQuestions
     /// </summary>
     public class FindCenterOfStarGraph
     {
-        public int findCenter(int[][] edges)
+        public int FindCenter(int[][] edges)
         {
             if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1])
             {
@@ -28,6 +28,8 @@ namespace InterwiewQuestions.GraphTheoryQuestions
                 return -1;
             }
         }
+
+
 
     }
 }
