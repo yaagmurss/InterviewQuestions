@@ -27,6 +27,7 @@
 - NumberOfEnclaves
 - FindCenterOfStarGraph
 - FindIfPathExistsInGraph
+- FindTheTownJudge
 
 ***Easy Questions***
 - RunninArray
