@@ -37,17 +37,15 @@ namespace InterwiewQuestions
 
             int[][] edges = new int[][]
                 {
-                    new int[]{ 0,1 },
-                    new int[]{ 1,2 },
-                    new int[]{ 2,0 }                    
+                    new int[]{ 1,3 },
+                    new int[]{ 2,3 },
+                    new int[]{ 3,1 }
                 };
-            var n = 5;
-            var source = 0;
-            var destination = 2;
+            var n = 2;
+            
 
             var findPath = new FindPath();
-            Console.WriteLine(findPath.ValidPath(n, edges, source, destination)); 
-
+            Console.WriteLine(findPath.FindJudge(n, edges));
 
         }
     }
