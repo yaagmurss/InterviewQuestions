@@ -28,6 +28,7 @@
 - FindCenterOfStarGraph
 - FindIfPathExistsInGraph
 - FindTheTownJudge
+- SchedulingTheCourse
 
 ***Easy Questions***
 - RunninArray
