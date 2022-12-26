@@ -1,6 +1,5 @@
-﻿using System;
+﻿
 using InterwiewQuestions.GraphTheoryQuestions;
-using System.Linq;
 
 namespace InterwiewQuestions
 {
@@ -35,17 +34,16 @@ namespace InterwiewQuestions
 
             //    numberOfEnclaves.NumberOfEnclavesDepthFirstSearchApproach(grid);
 
-            int[][] edges = new int[][]
+            int[][] prerequisites = new int[][]
                 {
                     new int[]{ 1,3 },
                     new int[]{ 2,3 },
                     new int[]{ 3,1 }
                 };
-            var n = 2;
-            
 
-            var findPath = new FindPath();
-            Console.WriteLine(findPath.FindJudge(n, edges));
+            var schedulingProblems = new Scheduling();
+
+            schedulingProblems.CanFinish(3, prerequisites) ;
 
         }
     }

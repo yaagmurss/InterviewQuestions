@@ -1,66 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System;
 
 namespace InterwiewQuestions.GraphTheoryQuestions
 {
     public class Scheduling
     {
-        public static bool[] canFinish;
-        public static bool[] courseVisited;
-
-        private static bool CanFinish(int numCourses, int[][] prerequisites)
+        public bool CanFinish(int numCourses, int[][] prerequisites)
         {
-            
-            if (numCourses <= 0)
-                return true;
 
-            canFinish = new bool[numCourses];
-            courseVisited = new bool[numCourses];
+            if (numCourses == 1)
+                return true;        
 
-          
-            for (int c = 0; c < numCourses; c++)
+
+            var visited = new bool[numCourses];
+            var onStack = new bool[numCourses];
+
+            for (int i = 0; i < numCourses; ++i)
             {
-                if (!canFinish[c])
-                {
-                    
-                    if (!CanFinishCourse(c, prerequisites))
-                        return false;
-                }
-            }
 
+                bool result = dfs(prerequisites, i, visited, onStack);
+
+                if (!result)
+                    return false;
+            }
             return true;
         }
-
-        private static bool CanFinishCourse(int c, int[][] prerequisites)
+        private bool dfs(int[][] prerequisites, int num, bool[] visited, bool[] onStack)
         {
-            if (canFinish[c])
+            if (onStack[num])
+                return false;
+            if (visited[num])
                 return true;
 
-            if (courseVisited[c])
-                return false;
-            else
-                courseVisited[c] = true;
+            visited[num] = true;
+            onStack[num] = true;           
 
-            for (int row = 0; row < prerequisites.Length; row++)
+            for (int c = 0; c < num; c++)
             {
-                
-                if (prerequisites[row][0] == c)
-                {
-                    
-                    for (int col = 1; col < prerequisites[row].Length; col++)
-                    {
-                        if (!CanFinishCourse(prerequisites[row][col], prerequisites))
-                        {
-                            canFinish[c] = false;
-                            return canFinish[c];
-                        }
-                    }
-                }
+
+                bool result = dfs(prerequisites, c, visited, onStack);
+
+                if (!result)
+                    return false;
             }
 
-            canFinish[c] = true;
-            return canFinish[c];
+            onStack[num] = false;
+
+            return true;
         }
 
 
