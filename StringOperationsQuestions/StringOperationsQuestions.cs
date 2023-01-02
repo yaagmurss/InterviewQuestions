@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using System;
+using System.Runtime.InteropServices;
+
 
 namespace InterwiewQuestions.StringOperations
 {
-    internal class StringOperationsQuestions
+    public class StringOperationsQuestions
     {
         public int LengthOfLastWord(string s)
         {
@@ -38,5 +37,38 @@ namespace InterwiewQuestions.StringOperations
 
 
         }
+
+        /// <summary>
+        /// We define the usage of capitals in a word to be right when one of the following cases holds:
+        /// All letters in this word are capitals, like "USA".
+        /// All letters in this word are not capitals, like "leetcode".
+        /// Only the first letter in this word is capital, like "Google".
+        /// Given a string word, return true if the usage of capitals in it is right.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public bool DetectCapitalUse(string word)
+        {
+            bool islower = true, isupper = true;
+
+            for (int i = 1; i < word.Length; i++)
+            {
+                if (Char.IsLower(word[i]))
+                {
+                    isupper = false;
+                }
+                else
+                {
+                    islower = false;
+                }
+
+            }
+            return islower || (isupper && Char.IsUpper(word[0]));
+
+
+
+        }
     }
+
+    
 }

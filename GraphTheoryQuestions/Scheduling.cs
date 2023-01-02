@@ -1,23 +1,17 @@
-﻿using System.Collections.Generic;
-using System;
-
-namespace InterwiewQuestions.GraphTheoryQuestions
+﻿namespace InterwiewQuestions.GraphTheoryQuestions
 {
     public class Scheduling
     {
         public bool CanFinish(int numCourses, int[][] prerequisites)
         {
-
             if (numCourses == 1)
-                return true;        
-
+                return true;     
 
             var visited = new bool[numCourses];
             var onStack = new bool[numCourses];
 
             for (int i = 0; i < numCourses; ++i)
             {
-
                 bool result = dfs(prerequisites, i, visited, onStack);
 
                 if (!result)
@@ -48,7 +42,6 @@ namespace InterwiewQuestions.GraphTheoryQuestions
 
             return true;
         }
-
 
     }
 }

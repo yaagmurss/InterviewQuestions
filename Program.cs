@@ -1,4 +1,4 @@
-﻿
+﻿using InterwiewQuestions.StringOperations;
 using InterwiewQuestions.GraphTheoryQuestions;
 
 namespace InterwiewQuestions
@@ -34,16 +34,29 @@ namespace InterwiewQuestions
 
             //    numberOfEnclaves.NumberOfEnclavesDepthFirstSearchApproach(grid);
 
-            int[][] prerequisites = new int[][]
-                {
-                    new int[]{ 1,3 },
-                    new int[]{ 2,3 },
-                    new int[]{ 3,1 }
-                };
+            //int[][] prerequisites = new int[][]
+            //    {
+            //        new int[]{ 1,3 },
+            //        new int[]{ 2,3 },
+            //        new int[]{ 3,1 }
+            //    };
 
-            var schedulingProblems = new Scheduling();
+            //var schedulingProblems = new Scheduling();
 
-            schedulingProblems.CanFinish(3, prerequisites) ;
+            //schedulingProblems.CanFinish(3, prerequisites) ;
+
+
+            // DetectCapitalUse
+
+            //Input: word = "USA"
+            //Output: true
+
+
+            //Input: word = "FlaG"
+            //Output: false
+            var stringOperationsQuestions = new StringOperationsQuestions();
+
+            stringOperationsQuestions.DetectCapitalUse("GoogLe");
 
         }
     }
