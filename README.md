@@ -14,12 +14,7 @@
 
 ***String Operation Questions***
 - LengthOfLastWord
-- SearchInsertPosition
-- PlusOne
-- AddBinary
-- MySqrt
-- ClimbingStairs
-- RemoveDublicatesFromLinkedList
+- DetectCapitalUse
 
 ***Graph Theory***
 - DepthFirstSearch
