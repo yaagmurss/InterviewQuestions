@@ -1,5 +1,7 @@
 ﻿using InterwiewQuestions.StringOperations;
 using InterwiewQuestions.GraphTheoryQuestions;
+using InterwiewQuestions.EasyQuestions;
+using System;
 
 namespace InterwiewQuestions
 {
@@ -52,11 +54,15 @@ namespace InterwiewQuestions
             //Output: true
 
 
-            //Input: word = "FlaG"
-            //Output: false
-            var stringOperationsQuestions = new StringOperationsQuestions();
+            ////Input: word = "FlaG"
+            ////Output: false
+            //var stringOperationsQuestions = new StringOperationsQuestions();
 
-            stringOperationsQuestions.DetectCapitalUse("GoogLe");
+            //stringOperationsQuestions.DetectCapitalUse("GoogLe");
+
+            var prices = new int[] { 3, 2, 6, 5, 0, 3 };
+            var easyQuestions = new EasyQA();
+            Console.WriteLine(easyQuestions.MaxProfit(prices)  ); 
 
         }
     }

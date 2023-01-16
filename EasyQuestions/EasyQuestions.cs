@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace InterwiewQuestions.EasyQuestions
 {
-    public class EasyQuestions
+    public class EasyQA
     {
 
         public int[] RunningSum(int[] nums)
@@ -40,7 +40,6 @@ namespace InterwiewQuestions.EasyQuestions
 
             return runningArray;
         }
-
         public IEnumerable<string> OrderFromLongestToShortest(IEnumerable<string> words)
         {
             // Using LINQ, implement the OrderFromLongestToShortest method, which takes a collection of strings,
@@ -415,8 +414,6 @@ namespace InterwiewQuestions.EasyQuestions
 
             return newNumber;
         }
-
-
         public string AddBinary(string a, string b)
         {
 
@@ -455,9 +452,29 @@ namespace InterwiewQuestions.EasyQuestions
             }
             return result;
         }
+        
+        public int MaxProfit(int[] prices)
+        {
+                if (prices.Length == 0) return 0;
+                if (prices.Length == 2 && prices[0] < prices[1]) return prices[1] - prices[0];
+                if (prices.Length == 2 && prices[0] > prices[1]) return 0;
 
+                int buy = int.MaxValue;
+                int maxProfit = 0;
 
-    }
-
+                for (int i = 0; i < prices.Length; i++)
+                {
+                    if (buy > prices[i])
+                    {
+                        buy = prices[i];
+                    }
+                    else if (maxProfit < prices[i] - buy)
+                    {
+                        maxProfit = prices[i] - buy;
+                    }
+                }
+                return maxProfit;
+        }
+    }    
 
 }
