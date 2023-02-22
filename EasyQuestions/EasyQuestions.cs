@@ -7,7 +7,6 @@ namespace InterwiewQuestions.EasyQuestions
 {
     public class EasyQA
     {
-
         public int[] RunningSum(int[] nums)
         {
             int counter = 0;
@@ -492,6 +491,7 @@ namespace InterwiewQuestions.EasyQuestions
             return false;
 
         }
+        
     }    
 
 }

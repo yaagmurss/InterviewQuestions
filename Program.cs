@@ -9,11 +9,11 @@ namespace InterwiewQuestions
     {
         static void Main(string[] args)
         {
-            int[] nums = { 1, 2, 3, 4,4 };
+            
 
             var easyQuestions = new EasyQA();
 
-            Console.WriteLine(easyQuestions.ContainsDuplicate(nums));
+            Console.WriteLine(easyQuestions.IsPowerOfTwo(555));
 
 
         }
