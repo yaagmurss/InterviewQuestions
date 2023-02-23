@@ -9,13 +9,8 @@ namespace InterwiewQuestions
     {
         static void Main(string[] args)
         {
-            
-
             var easyQuestions = new EasyQA();
-
-            Console.WriteLine(easyQuestions.IsPowerOfTwo(555));
-
-
+            Console.WriteLine(easyQuestions.isPowerOfTwoMethod2(8));
         }
     }
 }

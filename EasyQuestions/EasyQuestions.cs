@@ -491,7 +491,17 @@ namespace InterwiewQuestions.EasyQuestions
             return false;
 
         }
-        
+
+        public bool isPowerOfTwo(int n)
+        {
+            return n > 0 && (n & n - 1) == 0;
+        }
+
+        public bool isPowerOfTwoMethod2(int n)
+        {
+            if(n<0) return false;
+            return Math.Ceiling(Math.Log2(n)) == Math.Floor(Math.Log2(n));
+        }
     }    
 
 }
