@@ -502,6 +502,18 @@ namespace InterwiewQuestions.EasyQuestions
             if(n<0) return false;
             return Math.Ceiling(Math.Log2(n)) == Math.Floor(Math.Log2(n));
         }
+
+        public bool ContainsNearbyDuplicate(int[] nums, int k)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < nums.Length; j++)
+                {
+                    if (nums[i] == nums[j] & Math.Abs(i - j) <= k & i != j) return true;
+                }
+            }
+            return false;
+        }
     }    
 
 }
