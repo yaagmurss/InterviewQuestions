@@ -32,6 +32,7 @@
 - PalindromeNumber
 - RomanNumberConverter
 - LongestCommonPrefix
+- ContainsNearbyDuplicate
 
 **Medium Questions**
 - Maximum69Number
